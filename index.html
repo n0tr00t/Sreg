@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Search Registration - Beebeeto.com by ff0000team</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Search Registration - Beebeeto.com</h1>
+        <p>Sreg可对使用者通过输入email、phone、username的返回用户注册的所有互联网护照信息。</p>
+        <p class="view"><a href="https://github.com/ff0000team/Sreg">View the Project on GitHub <small>ff0000team/Sreg</small></a></p>
+        <ul>
+          <li><a href="https://github.com/ff0000team/Sreg/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/ff0000team/Sreg/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/ff0000team/Sreg">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a id="sreg-v10" class="anchor" href="#sreg-v10" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sreg V1.0</h3>
+
+<ul>
+<li>AppName: Sreg [Search Registration]</li>
+<li>Create:  2015-03-03</li>
+<li>Author:  Dave, Evi1m0, Hel</li>
+<li>Website: <a href="http://buzz.beebeeto.com">http://buzz.beebeeto.com</a>
+</li>
+</ul>
+
+<p>Sreg可对使用者通过输入<code>email</code>、<code>phone</code>、<code>username</code>的返回用户注册的所有互联网护照信息，例如：</p>
+
+<pre><code>➜  Sreg git:(master) python reg_test.py -h
+usage: reg_test.py [-h] [-u USER] [-e EMAIL] [-c CELLPHONE]
+
+Check how many Platforms the User registered.
+
+optional arguments:
+  -h, --help    show this help message and exit
+  -u USER
+  -e EMAIL
+  -c CELLPHONE
+
+➜  Sreg git:(master) ✗ python reg_test.py -e test@test.com
+
+     .d8888b.
+    d88P  Y88b
+    Y88b.
+     "Y888b.  888d888 .d88b.  .d88b.
+        "Y88b.888P"  d8P  Y8bd88P"88b
+          "888888    88888888888  888
+    Y88b  d88P888    Y8b.    Y88b 888
+     "Y8888P" 888     "Y8888  "Y88888
+                                  888
+                             Y8b d88P
+                              "Y88P"
+
+[*] App: Search Registration
+[*] Version: V1.0(20150303)
+[*] Website: buzz.beebeeto.com
+
+[+] Email Checking: test@test.com
+
+[购物] 淘男网 (http://www.51taonan.com/)
+[IT] 51cto (http://www.51cto.com)
+[娱乐] 一听音乐网 (http://www.1ting.com/)
+[工具] 金山词霸 (http://www.iciba.com/)
+[生活] 58同城 (http://www.58.com/)
+[名站] 优酷 (http://www.youku.com)
+[IT] 果壳网 (http://www.guokr.com/)
+[购物] 好乐买 (http://www.okbuy.com/)
+[旅行] 艺龙 (http://www.elong.com/)
+[旅游] 凯撒旅游网 (http://www.caissa.com.cn/)
+[旅游] 酷讯旅游网 (http://www.kuxun.cn)
+[娱乐] 乐视网 (http://www.youku.com)
+[IT] CSDN (http://www.csdn.net/)
+[生活] 百合网 (http://www.baihe.com/)
+[购物] 当当网 (http://www.dangdang.com/)
+
+[+] Results the save path: ./reports/email_test@test.com.html
+</code></pre>
+
+<p>Sreg一共有三种查询方式：</p>
+
+<ul>
+<li>用户名</li>
+<li>手机</li>
+<li>邮箱</li>
+</ul>
+
+<p>查询完成后，Sreg会返回给使用者一个精致的html页面供以查看。</p>
+
+<h3>
+<a id="plugin-sdk" class="anchor" href="#plugin-sdk" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plugin (SDK)</h3>
+
+<p>编写网站注册查询插件非常简单，首先将想要进行编写的网站在<code>/plugins/</code>建立对应<code>website.json</code>文件。</p>
+
+<pre><code>{
+    "information":{
+        "author" : "evi1m0",
+        "date" : "2015/03/10",
+        "name" : "PPTV",
+        "website" : "http://www.pptv.com/",
+        "category" : "娱乐",
+        "icon" : "http://static9.pplive.cn/pub/flagment/v_20150309153320/modules/g-1408-hd/images/logo.png",
+        "desc" : "PPTV聚力-始终和你同一频道,汇聚最清晰,最流畅的网络各类最新热门直播、点播视频。"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://api.passport.pptv.com/v3/query/loginname_exist.do?logintype=username&amp;username={}",
+        "email_url" : "http://api.passport.pptv.com/v3/query/loginname_exist.do?logintype=username&amp;username={}",
+        "user_url" : "http://api.passport.pptv.com/v3/query/loginname_exist.do?logintype=username&amp;username={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "&lt;errorCode&gt;5&lt;/errorCode&gt;",
+        "judge_no_keyword" : "&lt;errorCode&gt;0&lt;/errorCode&gt;",
+        "profile_url" : ""
+    }
+}
+</code></pre>
+
+<ul>
+<li>information: 插件编写者及网站所需信息；</li>
+<li>request: 核心接口定义，其中cellphone, email, user分别位手机注册、邮箱注册、用户名注册查询接口，如果仅有手机注册查询接口，其他则均为相同API即可；</li>
+<li>status: 返回结果判断，judge_yes_keyword为用户已经注册此网站，相反为未注册此网站，profile_url为预留字段；</li>
+</ul>
+
+<p>如果接口为POST方法，则修改method为POST后，定义post_fields为参数字段，例renren：</p>
+
+<pre><code>"request" :{
+    "cellphone_url" : "http://reg.renren.com/AjaxRegisterAuth.do",
+    "email_url" : "http://reg.renren.com/AjaxRegisterAuth.do",
+    "user_url" : "http://reg.renren.com/AjaxRegisterAuth.do",
+    "method" : "POST",
+    "post_fields":{
+        "authType":"email",
+        "value":"",
+        "stage":"3"
+    }
+},
+</code></pre>
+
+<h3>
+<a id="category" class="anchor" href="#category" aria-hidden="true"><span class="octicon octicon-link"></span></a>Category</h3>
+
+<ul>
+<li>IT</li>
+<li>名站</li>
+<li>娱乐</li>
+<li>工具</li>
+<li>教育</li>
+<li>旅行</li>
+<li>游戏</li>
+<li>生活</li>
+<li>社交</li>
+<li>社区</li>
+<li>购物</li>
+<li>资讯</li>
+<li>其它</li>
+<li>求职招聘</li>
+</ul>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/ff0000team">ff0000team</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
