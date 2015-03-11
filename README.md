@@ -3,7 +3,8 @@
 - AppName: Sreg [Search Registration]
 - Create:  2015-03-03
 - Author:  Dave, Evi1m0, Hel
-- Website: [http://buzz.beebeeto.com](http://buzz.beebeeto.com)
+- Fourm: [http://buzz.beebeeto.com](http://buzz.beebeeto.com)
+- Website: [http://ff0000team.github.io/Sreg/](http://ff0000team.github.io/Sreg/)
 
 
 Sreg可对使用者通过输入```email```、```phone```、```username```的返回用户注册的所有互联网护照信息，例如：
