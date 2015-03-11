@@ -1,0 +1,31 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/11",
+        "name" : "金山词霸",
+        "website" : "http://www.iciba.com/",
+        "category" : "工具",
+        "icon" : "http://cdn.iciba.com/web/co/logo/logo_index.gif",
+        "desc" : "爱词霸英语为广大网友提供在线翻译、在线词典、英语口语、英语学习资料、汉语词典,金山词霸下载等服务"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://my.iciba.com/?c=register&m=checkEmail",
+        "email_url" : "http://my.iciba.com/?c=register&m=checkEmail",
+        "user_url" : "http://my.iciba.com/?c=register&m=checkEmail",
+        "method" : "POST",
+        "post_fields":{
+            "e":""
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword":"1",
+        "judge_no_keyword":"0",
+        "profile_url" : ""
+    },
+
+    "headers":{
+        "nop" : ""
+    }
+}

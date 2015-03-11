@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/11",
+        "name" : "酷讯旅游网",
+        "website" : "http://www.kuxun.cn",
+        "category" : "旅游",
+        "icon" : "http://passport.kuxun.cn/Public/Images/logo_03.png",
+        "desc" : "酷讯旅游网(Kuxun.cn)是中国领先的在线旅游媒体。"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://passport.kuxun.cn/isReg?loginName={}",
+        "email_url" : "http://passport.kuxun.cn/isReg?loginName={}",
+        "user_url" : "http://passport.kuxun.cn/isReg?loginName={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "1",
+        "judge_no_keyword" : "0",
+        "profile_url":""
+    }
+}

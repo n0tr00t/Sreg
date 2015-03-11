@@ -1,0 +1,31 @@
+{
+    "information":{
+        "author" : "foundu",
+        "date" : "2015/03/10",
+        "name" : "淘男网",
+        "website" : "http://www.51taonan.com/",
+        "category" : "购物",
+        "icon" : "http://www.51taonan.com/static/zh_cn/insidepage/market/default/images/myhome_v4/logo.gif?v=1020",
+        "desc" : "淘男网是一起以女性权力为主的网上交友网站，颠覆了传统男追女的交友模式，提出一个全新的概念“淘男”，让女性掌握求爱的主动权。"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://www.51taonan.com/index.php?page=ajax_mobile_number&mobile_number={}",
+        "email_url" : "http://www.51taonan.com/index.php?page=ajax_email&email={}",
+        "user_url" : "http://www.51taonan.com/index.php?page=ajax_mobile_number&mobile_number={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "false",
+        "judge_no_keyword" : "true",
+        "profile_url":""
+    },
+
+    "headers":{
+        "nop" : ""
+    }
+}

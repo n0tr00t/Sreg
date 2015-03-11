@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/11",
+        "name" : "当当网",
+        "website" : "http://www.dangdang.com/",
+        "category" : "购物",
+        "icon" : "http://img35.ddimg.cn/upload_img/00405/luyi/logo-2.jpg",
+        "desc" : "当当网成立于1999年11月，以图书零售起家，已发展成为领先的在线零售商：中国最大图书零售商、高速增长的百货业务和第三方招商平台。"
+    },
+
+    "request" :{
+        "cellphone_url" : "https://login.dangdang.com/p/email_checker.php",
+        "email_url" : "https://login.dangdang.com/p/email_checker.php",
+        "user_url" : "https://login.dangdang.com/p/email_checker.php",
+        "method" : "POST",
+        "post_fields":{
+            "email":""
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword":"true",
+        "judge_no_keyword":"false",
+        "profile_url" : ""
+    }
+}

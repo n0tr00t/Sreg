@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "evi1m0",
+        "date" : "2015/03/10",
+        "name" : "51cto",
+        "website" : "http://www.51cto.com",
+        "category" : "IT",
+        "icon" : "http://www.51cto.com/images/home/images/logo.jpg",
+        "desc" : "51CTO传媒是专注于IT技术创新与发展的互联网媒体平台，由一批资深互联网专业人士创立于2005年。"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://ucenter.51cto.com/checkemails.php?email={}",
+        "email_url" : "http://ucenter.51cto.com/checkemails.php?email={}",
+        "user_url" : "http://ucenter.51cto.com/checkuser.php?username={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword":"被注册",
+        "judge_no_keyword":"恭喜",
+        "profile_url" : ""
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "information":{
+        "author" : "hel",
+        "date" : "2015/03/10",
+        "name" : "人人网--手机注册",
+        "website" : "http://www.renren.com/",
+        "category" : "社交",
+        "icon" : "http://a.xnimg.cn/nx/apps/login/cssimg/logo-big.jpg",
+        "desc" : "人人网 校内是一个真实的社交网络，联络你和你周围的朋友。 加入人人网校内你可以:联络朋友，了解他们的最新动态；和朋友分享相片、音乐和电影；找到老同学，结识新朋友；用照片和日志记录生活,展示自我。"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://reg.renren.com/AjaxRegisterAuth.do",
+        "email_url" : "http://reg.renren.com/AjaxRegisterAuth.do",
+        "user_url" : "http://reg.renren.com/AjaxRegisterAuth.do",
+        "method" : "POST",
+        "post_fields":{
+            "authType":"email",
+            "value":"",
+            "stage":"3"
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword":"不能注册",
+        "judge_no_keyword":"OK",
+        "profile_url" : ""
+    }
+}

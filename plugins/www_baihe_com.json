@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "evi1m0",
+        "date" : "2015/03/10",
+        "name" : "百合网",
+        "website" : "http://www.baihe.com/",
+        "category" : "生活",
+        "icon" : "http://images6.baihe.com/icon/logo_home.jpg",
+        "desc" : "百合网--实名婚恋网开创者，实名认证，婚恋征婚交友更诚信"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://my.baihe.com/register/emailCheckForXs?email={}",
+        "email_url" : "http://my.baihe.com/register/emailCheckForXs?email={}",
+        "user_url" : "http://my.baihe.com/register/emailCheckForXs?email={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword":"\"state\":0",
+        "judge_no_keyword":"\"state\":1",
+        "profile_url" : ""
+    }
+}

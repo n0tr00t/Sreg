@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "foundu",
+        "date" : "2015/03/10",
+        "name" : "58同城",
+        "website" : "http://www.58.com/",
+        "category" : "生活",
+        "icon" : "http://img.58cdn.com.cn/ui6/index/logo.gif",
+        "desc" : "58同城（www.58.com）2005年12月创立于北京，为用户提供“本地、免费、真实、高效”的生活服务。"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://passport.58.com/ajax/checkemail?id=6266&email={}",
+        "email_url" : "http://passport.58.com/ajax/checkemail?id=6266&email={}",
+        "user_url" : "http://passport.58.com/ajax/checkemail?id=6266&email={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "0",
+        "judge_no_keyword" : "1",
+        "profile_url" : ""
+    }
+}

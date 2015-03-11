@@ -1,0 +1,31 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/11",
+        "name" : "凯撒旅游网",
+        "website" : "http://www.caissa.com.cn/",
+        "category" : "旅游",
+        "icon" : "http://www.caissa.com.cn/share/i/images2013/logo.jpg",
+        "desc" : "凯撒旅游网提供专业旅游咨询；轻松实现在线预订、网上支付、订单查询功能；"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://ws.caissa.com.cn/user.ashx?JudgeUserName={}",
+        "email_url" : "http://ws.caissa.com.cn/user.ashx?JudgeUserName={}",
+        "user_url" : "http://ws.caissa.com.cn/user.ashx?JudgeUserName={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "({count:2})",
+        "judge_no_keyword" : "({count:0})",
+        "profile_url" : ""
+    },
+
+    "headers":{
+        "nop" : ""
+    }
+}

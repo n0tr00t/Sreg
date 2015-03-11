@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "foundu",
+        "date" : "2015/03/10",
+        "name" : "CSDN",
+        "website" : "http://www.csdn.net/",
+        "category" : "IT",
+        "icon" : "http://www.csdn.net/css/logo.png",
+        "desc" : "CSDN创立于1999年，是中国最大的IT社区和服务平台。"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://passport.csdn.net/account/register?action=validateEmail&email={}",
+        "email_url" : "http://passport.csdn.net/account/register?action=validateEmail&email={}",
+        "user_url" : "http://passport.csdn.net/account/register?action=validateUsername&username={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "false",
+        "judge_no_keyword" : "true",
+        "profile_url" : ""
+    }
+}

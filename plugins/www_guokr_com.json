@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/10",
+        "name" : "果壳网",
+        "website" : "http://www.guokr.com/",
+        "category" : "IT",
+        "icon" : "https://sslstatic.guokr.com/skin/imgs/4-logo.svg",
+        "desc" : "果壳网是一个泛科技主题网站,提供负责任、有智趣、贴近生活的内容,你可以在这里阅读、分享、交流、提问。"
+    },
+
+    "request" :{
+        "cellphone_url" : "https://account.guokr.com/apis/auth/email.json?retrieve_type=is_available&email={}",
+        "email_url" : "https://account.guokr.com/apis/auth/email.json?retrieve_type=is_available&email={}",
+        "user_url" : "https://account.guokr.com/apis/auth/email.json?retrieve_type=is_available&email={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "\"result\": {\"is_available\": false}}",
+        "judge_no_keyword" : "\"result\": {\"is_available\": true}}",
+        "profile_url" : ""
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/10",
+        "name" : "乐视网",
+        "website" : "http://www.youku.com",
+        "category" : "娱乐",
+        "icon" : "https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3505732088,3886367895&fm=58",
+        "desc" : "乐视网(letv.com)是以正版,高清影视剧为主的视频门户,专业影视剧视频网站。"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://sso.letv.com/user/checkMobileExists/mobile/{}",
+        "email_url" : "http://sso.letv.com/user/checkEmailExists/email/{}",
+        "user_url" : "http://sso.letv.com/user/checkMobileExists/mobile/{}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "{\"result\":{\"status\":\"1\"}}",
+        "judge_no_keyword" : "{\"result\":false}",
+        "profile_url":""
+    }
+}

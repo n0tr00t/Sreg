@@ -1,0 +1,31 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/11",
+        "name" : "好乐买",
+        "website" : "http://www.okbuy.com/",
+        "category" : "购物",
+        "icon" : "http://www.okbuy.com/resources/images/miniheaderlogo.png",
+        "desc" : "好乐买使用OkBuy的用意就是让更多的人体验到便捷的网上购物体验，好，就来买吧！"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://www.okbuy.com/ajax/email/emailifexist",
+        "email_url" : "http://www.okbuy.com/ajax/email/emailifexist",
+        "user_url" : "http://www.okbuy.com/ajax/email/emailifexist",
+        "method" : "POST",
+        "post_fields":{
+            "email":""
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword":"false",
+        "judge_no_keyword":"true",
+        "profile_url" : ""
+    },
+
+    "headers":{
+        "nop" : ""
+    }
+}

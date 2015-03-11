@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "evi1m0",
+        "date" : "2015/03/10",
+        "name" : "PPTV",
+        "website" : "http://www.pptv.com/",
+        "category" : "娱乐",
+        "icon" : "http://static9.pplive.cn/pub/flagment/v_20150309153320/modules/g-1408-hd/images/logo.png",
+        "desc" : "PPTV聚力-始终和你同一频道,汇聚最清晰,最流畅的网络各类最新热门直播、点播视频。"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://api.passport.pptv.com/v3/query/loginname_exist.do?logintype=username&username={}",
+        "email_url" : "http://api.passport.pptv.com/v3/query/loginname_exist.do?logintype=username&username={}",
+        "user_url" : "http://api.passport.pptv.com/v3/query/loginname_exist.do?logintype=username&username={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "<errorCode>5</errorCode>",
+        "judge_no_keyword" : "<errorCode>0</errorCode>",
+        "profile_url" : ""
+    }
+}
