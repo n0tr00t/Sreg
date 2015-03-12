@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/12",
+        "name" : "CNZZ",
+        "website" : "http://www.cnzz.com/",
+        "category" : "IT",
+        "icon" : "http://www.cnzz.com/images/logo.png",
+        "desc" : "CNZZ数据专家是全球最大的中文网站统计分析平台，为各类网站提供免费、安全、稳定的流量统计系统与网站数据服务，帮助网站创造更大价值！"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://tongji.cnzz.com/main.php?c=user&a=reg&ajax=module=checkusername&username={}",
+        "email_url" : "http://tongji.cnzz.com/main.php?c=user&a=reg&ajax=module=checkusername&username={}",
+        "user_url" : "http://tongji.cnzz.com/main.php?c=user&a=reg&ajax=module=checkusername&username={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "{\"data\":{\"checkusername\":{\"status\":\"1\"}}}",
+        "judge_no_keyword" : "{\"data\":{\"checkusername\":{\"status\":\"0\"}}}",
+        "profile_url":""
+    }
+}
