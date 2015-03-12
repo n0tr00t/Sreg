@@ -1,0 +1,28 @@
+{
+    "information":{
+        "author" : "evi1m0",
+        "date" : "2015/03/12",
+        "name" : "中关村在线",
+        "website" : "http://www.zol.com.cn/",
+        "category" : "IT",
+        "icon" : "http://service.zol.com.cn/user/images/login2014/logo.png",
+        "desc" : "中关村在线——中国第一科技门户，是一家资讯覆盖全国并定位于销售促进型的IT互动门户，被认为是大中华区最具商业价值的IT专业门户。"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://service.zol.com.cn/user/ajax/login2014/checkRegUserid.php",
+        "email_url" : "http://service.zol.com.cn/user/ajax/login2014/checkRegUserid.php",
+        "user_url" : "http://service.zol.com.cn/user/ajax/login2014/checkRegUserid.php",
+        "method" : "POST",
+        "post_fields":{
+            "act" : "check",
+            "userid" : ""
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "{\"info\":\"error\",",
+        "judge_no_keyword" : "{\"info\":\"ok\",",
+        "profile_url" : ""
+    }
+}

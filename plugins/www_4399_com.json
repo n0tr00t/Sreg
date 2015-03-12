@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "evi1m0",
+        "date" : "2015/03/12",
+        "name" : "4399",
+        "website" : "http://www.4399.com/",
+        "category" : "娱乐",
+        "icon" : "http://imga.4399.cn/upload_pic/2012/4399_logo.gif",
+        "desc" : "4399是中国最大的小游戏专业网站,免费为你提供小游戏大全。"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://ptlogin.4399.com/ptlogin/isExist.do?appId=www_home&regMode=reg_normal&v=1&username={}",
+        "email_url" : "http://ptlogin.4399.com/ptlogin/isExist.do?appId=www_home&regMode=reg_normal&v=1&username={}",
+        "user_url" : "http://ptlogin.4399.com/ptlogin/isExist.do?appId=www_home&regMode=reg_normal&v=1&username={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "用户名已被注册",
+        "judge_no_keyword" : "0",
+        "profile_url" : ""
+    }
+}
