@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/12",
+        "name" : "迅雷",
+        "website" : "http://www.youku.com",
+        "category" : "工具",
+        "icon" : "http://i.xunlei.com/v2.5/img/l_logo.jpg",
+        "desc" : "成立于2003年的迅雷，在创立之初就致力于为全球互联网提供最好的多媒体资源数据传输服务。"
+    },
+
+    "request" :{
+        "cellphone_url" : "https://zhuce.xunlei.com/register?jsoncallback=jsonp1426128051530&m=check_mail&mail={}",
+        "email_url" : "https://zhuce.xunlei.com/register?jsoncallback=jsonp1426128051530&m=check_mail&mail={}",
+        "user_url" : "https://zhuce.xunlei.com/register?jsoncallback=jsonp1426128051530&m=check_mail&mail={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "({\"result\":1302})",
+        "judge_no_keyword" : "({\"result\":0})",
+        "profile_url":""
+    }
+}
