@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/12",
+        "name" : "梦芭莎",
+        "website" : "http://www.moonbasa.com/",
+        "category" : "购物",
+        "icon" : "https://login.moonbasa.com/img/moonbasalogo1.jpg",
+        "desc" : "【梦芭莎官网】梦芭莎女性购物网站女装、内衣、文胸、鞋包_网购衣服商城"
+    },
+
+    "request" :{
+        "cellphone_url" : "https://login.moonbasa.com/home/checkmobile",
+        "email_url" : "https://login.moonbasa.com/home/checkemail",
+        "user_url" : "https://login.moonbasa.com/home/checkemail",
+        "method" : "POST",
+        "post_fields":{
+            "id":""
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "{\"Result\":\"-1\",",
+        "judge_no_keyword" : "{\"Result\":\"1\",",
+        "profile_url":""
+    }
+}
