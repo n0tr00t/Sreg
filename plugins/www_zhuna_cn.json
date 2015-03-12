@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/12",
+        "name" : "住哪儿",
+        "website" : "http://www.zhuna.cn/",
+        "category" : "旅游",
+        "icon" : "http://public.kezhan.znimg.com/www/default/images/logo.jpg",
+        "desc" : "住哪网是中国最专业的在线旅行住宿服务平台,提供国内40000多家酒店、全球260000家海外酒店的预订服务，及短租公寓、民宿客栈等预订服务。"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://www.zhuna.cn/account/isreg/?mobile={}",
+        "email_url" : "http://www.zhuna.cn/account/isreg/?mobile={}",
+        "user_url" : "http://www.zhuna.cn/account/isreg/?mobile={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "\"success\":true,\"data\":[{\"",
+        "judge_no_keyword" : "\"success\":true,\"data\":false",
+        "profile_url":""
+    }
+}
