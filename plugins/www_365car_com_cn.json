@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/12",
+        "name" : "车友互联",
+        "website" : "http://www.365car.com.cn/",
+        "category" : "生活",
+        "icon" : "http://www.365car.com.cn/web4s/images/logo_reg.png",
+        "desc" : "车友互联信息科技有限公司(4S在线增值服务系统运营商)倾力打造了创新汽车服务品牌"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://www.365car.com.cn/web4s/user/user_checkUserEmail.action",
+        "email_url" : "http://www.365car.com.cn/web4s/user/user_checkUserEmail.action",
+        "user_url" : "http://www.365car.com.cn/web4s/user/user_checkUserEmail.action",
+        "method" : "POST",
+        "post_fields":{
+            "uEmail":""
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "\"email\":\"has\"",
+        "judge_no_keyword" : "\"email\":\"no\"",
+        "profile_url":""
+    }
+}
