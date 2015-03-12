@@ -1,0 +1,28 @@
+{
+    "information":{
+        "author" : "Dave",
+        "date" : "2015/03/12",
+        "name" : "爱奇艺",
+        "website" : "http://www.iqiyi.com/",
+        "category" : "娱乐",
+        "icon" : "http://qiyipic.iqiyi.com/common/fix/public_images/logoCommon.png",
+        "desc" : "百度旗下的一家专注于提供免费、高清网络视频服务的大型视频网站。。"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://passport.iqiyi.com/apis/user/check_account.action",
+        "email_url" : "http://passport.iqiyi.com/apis/user/check_account.action",
+        "user_url" : "http://passport.iqiyi.com/apis/user/check_account.action",
+        "method" : "POST",
+        "post_fields":{
+            "account":"",
+            "agenttype":1
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "\"data\":true",
+        "judge_no_keyword" : "\"data\":false",
+        "profile_url":""
+    }
+}
