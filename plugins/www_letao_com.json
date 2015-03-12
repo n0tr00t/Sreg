@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/12",
+        "name" : "乐淘网",
+        "website" : "http://www.letao.com/",
+        "category" : "购物",
+        "icon" : "http://i.ltimg.cn/img/2012/11/23/901648226277.gif",
+        "desc" : "乐淘网（Letao，口号：我的鞋柜，我的乐淘）是中国主要的运动鞋、皮鞋网络零售网站，聚焦在垂直的鞋及其相关商品领域深耕。"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://www.letao.com/web_service/user_auth_ws.aspx?op=V2_check_auth_exist",
+        "email_url" : "http://www.letao.com/web_service/user_auth_ws.aspx?op=V2_check_auth_exist",
+        "user_url" : "http://www.letao.com/web_service/user_auth_ws.aspx?op=V2_check_auth_exist",
+        "method" : "POST",
+        "post_fields":{
+            "data":""
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "[\"ERROR\"",
+        "judge_no_keyword" : "[\"SUCCESS\"",
+        "profile_url":""
+    }
+}

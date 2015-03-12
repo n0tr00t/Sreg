@@ -1,0 +1,28 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/12",
+        "name" : "丽子女装",
+        "website" : "http://www.lizi.com/",
+        "category" : "购物",
+        "icon" : "http://img.nala.com.cn/lizi/b2c/images/logo.png?0816",
+        "desc" : "丽子美妆（lizi）一个专注售卖化妆品的网站 - 原娜拉（nala）化妆品商城"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://www.lizi.com/user/check_ifexists",
+        "email_url" : "http://www.lizi.com/user/check_ifexists",
+        "user_url" : "http://www.lizi.com/user/check_ifexists",
+        "method" : "POST",
+        "post_fields":{
+            "type":"email",
+            "value":""
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "\"status\":0",
+        "judge_no_keyword" : "\"status\":1",
+        "profile_url":""
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/12",
+        "name" : "网酒网",
+        "website" : "http://www.wangjiu.com/",
+        "category" : "购物",
+        "icon" : "http://www.wangjiu.com/htmlResource/images/global/logo.png",
+        "desc" : "网酒网是专业进口葡萄酒红酒网站，致力于国际一流进口葡萄酒,法国红酒品牌的销售，传递最新国际葡萄酒动态,葡萄酒专业课程培训，提供葡萄酒窖藏,红酒收藏投资服务"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://usercenter.wangjiu.com/api/web/query/isExist.jsonp?callback=&user_name={}",
+        "email_url" : "http://usercenter.wangjiu.com/api/web/query/isExist.jsonp?callback=&user_name={}",
+        "user_url" : "http://usercenter.wangjiu.com/api/web/query/isExist.jsonp?callback=&user_name={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "\"result\":[{\"COUNT\":\"1\"}]",
+        "judge_no_keyword" : "\"result\":[{\"COUNT\":\"0\"}]",
+        "profile_url":""
+    }
+}
