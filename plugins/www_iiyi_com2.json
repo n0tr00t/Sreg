@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/12",
+        "name" : "爱爱医",
+        "website" : "http://www.iiyi.com/",
+        "category" : "医学",
+        "icon" : "http://img0.iiyibbs.com/www/olds/css_2013/img/w_line.png",
+        "desc" : "爱爱医是面向医务人员的医学、药学专业知识与经验交流平台，并为医生提供国家医学考试中心信息服务的专业医学网站"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://auth.iiyi.com/register/checke",
+        "email_url" : "http://auth.iiyi.com/register/checke",
+        "user_url" : "http://auth.iiyi.com/register/checke",
+        "method" : "POST",
+        "post_fields":{
+            "email":""
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "-6",
+        "judge_no_keyword" : "1",
+        "profile_url":""
+    }
+}
