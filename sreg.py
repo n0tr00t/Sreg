@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 # encoding: utf-8
-#author: ff0000team
+# author: ff0000team
+# website: buzz.beebeeto.com
 
 
 import sys
 import glob
 import json
+import chardet
 import requests
 import urlparse
 import argparse
@@ -60,7 +62,10 @@ def check(plugin, passport, passport_type):
                 post_data[k] = passport
         try:
             content = requests.post(url, data=post_data, headers=headers, timeout=8).content
-            content = unicode(content, "utf-8")
+            encoding = chardet.detect(content)["encoding"]
+            if encoding == None:
+                encoding = "utf-8"
+            content = unicode(content, encoding)
         except Exception, e:
             print e, app_name
             return
