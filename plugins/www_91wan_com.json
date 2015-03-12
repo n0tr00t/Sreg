@@ -10,8 +10,8 @@
     },
 
     "request" :{
-        "cellphone_url" : "http://www.91wan.com/include_new/check_reg.php",
-        "email_url" : "http://www.91wan.com/include_new/check_reg.php",
+        "cellphone_url" : "",
+        "email_url" : "",
         "user_url" : "http://www.91wan.com/include_new/check_reg.php",
         "method" : "POST",
         "post_fields":{

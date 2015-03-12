@@ -10,8 +10,8 @@
     },
 
     "request" :{
-        "cellphone_url" : "https://account.bilibili.com/register/checkUname",
-        "email_url" : "https://account.bilibili.com/register/checkUname",
+        "cellphone_url" : "",
+        "email_url" : "",
         "user_url" : "https://account.bilibili.com/register/checkUname",
         "method" : "POST",
         "post_fields":{
