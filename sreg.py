@@ -59,7 +59,7 @@ def check(plugin, passport, passport_type):
             if v == "":
                 post_data[k] = passport
         try:
-            content = requests.post(url, data=post_data, timeout=8).content
+            content = requests.post(url, data=post_data, headers=headers, timeout=8).content
             content = unicode(content, "utf-8")
         except Exception, e:
             print e, app_name
