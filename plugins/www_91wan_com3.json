@@ -1,0 +1,29 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/12",
+        "name" : "91wan",
+        "website" : "http://www.91wan.com/",
+        "category" : "游戏",
+        "icon" : "http://image.91wan.com/91wan/img/index/logo.jpg",
+        "desc" : "91wan网页游戏平台是专业的网页游戏娱乐平台,这里汇集了最新网页游戏和好玩的网页游戏!"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://www.91wan.com/include_new/check_reg.php",
+        "email_url" : "http://www.91wan.com/include_new/check_reg.php",
+        "user_url" : "http://www.91wan.com/include_new/check_reg.php",
+        "method" : "POST",
+        "post_fields":{
+            "action":"chkname",
+            "flag":"email",
+            "user_name":""
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "</font>a1_ww_1au_chka1_ww_1a0",
+        "judge_no_keyword" : "</font>a1_ww_1au_chka1_ww_1a1",
+        "profile_url":""
+    }
+}
