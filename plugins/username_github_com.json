@@ -15,13 +15,13 @@
         "user_url" : "https://github.com/signup_check/username",
         "method" : "POST",
         "post_fields":{
-            "value" : ""
+            "value":""
         }
     },
 
     "status":{
         "judge_yes_keyword":"Username is already taken",
-        "judge_no_keyword":"",
+        "judge_no_keyword":" ",
         "profile_url" : ""
     }
 }
