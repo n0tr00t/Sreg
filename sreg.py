@@ -7,6 +7,7 @@ import sys
 import glob
 import json
 import requests
+import urlparse
 import argparse
 import multiprocessing
 
@@ -21,18 +22,20 @@ def check(plugin, passport, passport_type):
     passport: username, email, phone
     passport_type: passport type
     '''
+    if plugin["request"]["{}_url".format(passport_type)]:
+        url = plugin["request"]["{}_url".format(passport_type)].format(passport)
+    else:
+        return
     app_name = plugin['information']['name']
     category = plugin["information"]["category"]
     website = plugin["information"]["website"]
     judge_yes_keyword = plugin['status']['judge_yes_keyword']
     judge_no_keyword = plugin['status']['judge_no_keyword']
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'}
-
-    if plugin["request"]["{}_url".format(passport_type)]:
-        url = plugin["request"]["{}_url".format(passport_type)].format(passport)
-    else:
-        return
-
+    headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6',
+                'Host': urlparse.urlparse(url).netloc,
+                'Referer': url,
+                }
     if plugin['request']['method'] == "GET":
         try:
             content = requests.get(url, headers=headers, timeout=8).content
