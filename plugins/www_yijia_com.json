@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/12",
+        "name" : "亿家租住",
+        "website" : "http://www.yijia.com/",
+        "category" : "生活",
+        "icon" : "http://www.yijia.com/static/images/new/new_logo.jpg",
+        "desc" : "亿家网提供高品质的租住服务 400-600-2381"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://www.yijia.com/login/check_reg_phone/tel/{}",
+        "email_url" : "http://www.yijia.com/login/check_reg_phone/tel/{}",
+        "user_url" : "http://www.yijia.com/login/check_reg_phone/tel/{}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "has_in",
+        "judge_no_keyword" : "ok",
+        "profile_url":""
+    }
+}
