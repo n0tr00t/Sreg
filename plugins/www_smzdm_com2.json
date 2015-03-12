@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/12",
+        "name" : "什么值得买",
+        "website" : "http://www.smzdm.com/",
+        "category" : "购物",
+        "icon" : "http://www.smzdm.com/resources/public/img/logo.png",
+        "desc" : "什么值得买是一个中立的、致力于帮助广大网友买到更有性价比网购产品的最热门推荐网站，值得您每天都来看看。"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://www.smzdm.com/user/register/ajax_check_display_name",
+        "email_url" : "http://www.smzdm.com/user/register/ajax_check_display_name",
+        "user_url" : "http://www.smzdm.com/user/register/ajax_check_display_name",
+        "method" : "POST",
+        "post_fields":{
+            "display_name":""
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "\"error_code\":112116",
+        "judge_no_keyword" : "\"error_code\":0,\"error_msg\":[]",
+        "profile_url":""
+    }
+}

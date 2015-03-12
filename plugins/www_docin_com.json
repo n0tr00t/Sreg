@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/12",
+        "name" : "豆丁网",
+        "website" : "http://www.docin.com/",
+        "category" : "工具",
+        "icon" : "http://pics.wanlibo.com/images_cn/newDocin/head_bar/logo_2014.png",
+        "desc" : "豆丁网拥有全球最大中文文档库，关注高价值的实用信息，我们正致力成为全球最具价值的文档分享平台！"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://www.docin.com/vdwrutil/checkLoginEmail.do?loginEmail={}",
+        "email_url" : "http://www.docin.com/vdwrutil/checkLoginEmail.do?loginEmail={}",
+        "user_url" : "http://www.docin.com/jsp_cn/jquery/login/reg_check.jsp?flag=name&loginName={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "false",
+        "judge_no_keyword" : "true",
+        "profile_url":""
+    }
+}
