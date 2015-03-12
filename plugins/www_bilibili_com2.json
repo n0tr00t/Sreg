@@ -1,0 +1,28 @@
+{
+    "information":{
+        "author" : "evi1m0",
+        "date" : "2015/03/12",
+        "name" : "哔哩哔哩弹幕视频网",
+        "website" : "http://www.bilibili.com/",
+        "category" : "娱乐",
+        "icon" : "http://static.hdslb.com/images/header/2015_spring_logo.png",
+        "desc" : "bilibili是一家弹幕站点,大家可以在这里找到许多的欢乐."
+    },
+
+    "request" :{
+        "cellphone_url" : "https://account.bilibili.com/register/checkTel",
+        "email_url" : "https://account.bilibili.com/register/checkTel",
+        "user_url" : "https://account.bilibili.com/register/checkTel",
+        "method" : "POST",
+        "post_fields":{
+            "country_code":"1",
+            "tel":""
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "{\"status\":false",
+        "judge_no_keyword" : "{\"status\":true",
+        "profile_url" : ""
+    }
+}

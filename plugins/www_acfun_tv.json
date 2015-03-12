@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "e0",
+        "date" : "2015/03/12",
+        "name" : "acfun",
+        "website" : "http://www.acfun.tv/",
+        "category" : "娱乐",
+        "icon" : "http://static.acfun.mm111.net/dotnet/20130418/project/sanae/style/image/sprite-guide.png?salt=20140915",
+        "desc" : "AcFun是一家弹幕视频网站，致力于为每一个人带来欢乐。"
+    },
+
+    "request" :{
+        "cellphone_url" : "http://www.acfun.tv/username_unique.aspx?username={}",
+        "email_url" : "http://www.acfun.tv/username_unique.aspx?username={}",
+        "user_url" : "http://www.acfun.tv/username_unique.aspx?username={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "false",
+        "judge_no_keyword" : "true",
+        "profile_url":""
+    }
+}

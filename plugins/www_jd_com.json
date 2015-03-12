@@ -1,0 +1,27 @@
+{
+    "information":{
+        "author" : "evi1m0",
+        "date" : "2015/03/12",
+        "name" : "京东",
+        "website" : "http://www.jd.com/",
+        "category" : "购物",
+        "icon" : "http://misc.360buyimg.com/lib/img/e/logo-201305.png",
+        "desc" : "京东JD.COM-专业的综合网上购物商城。"
+    },
+
+    "request" :{
+        "cellphone_url" : "https://reg.jd.com/validateuser/isMobileEngaged?mobile={}",
+        "email_url" : "https://reg.jd.com/validateuser/isPinEngaged?pin={}",
+        "user_url" : "https://reg.jd.com/validateuser/isPinEngaged?pin={}",
+        "method" : "GET",
+        "post_fields":{
+
+        }
+    },
+
+    "status":{
+        "judge_yes_keyword" : "\"success\":1",
+        "judge_no_keyword" : "\"success\":0",
+        "profile_url" : ""
+    }
+}
