@@ -41,7 +41,7 @@ def check(plugin, passport, passport_type):
             content = requests.get(url, headers=headers, timeout=8).content
             content = unicode(content, "utf-8")
         except Exception, e:
-            print e, app_name
+            print inRed('\n[-] %s ::: %s\n' % (app_name, str(e)))
             return
         if judge_yes_keyword in content and judge_no_keyword not in content:
             print u"[{}] {}".format(category, ('%s (%s)' % (app_name, website)))
