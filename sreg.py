@@ -57,12 +57,11 @@ def check(plugin, passport, passport_type):
     elif plugin['request']['method'] == "POST":
         post_data = plugin['request']['post_fields']
         flag = 0
-        # if post_data.values().count("") == 1:
         for k, v in post_data.iteritems():
             if v == "":
                 post_data[k] = passport
                 flag += 1
-            elif "{}" in v:
+            elif "{}" in str(v):
                 post_data[k] = v.format(str(passport))
                 flag += 1
         if flag < 1:
