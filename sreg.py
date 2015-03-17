@@ -11,12 +11,13 @@ import chardet
 import requests
 import urlparse
 import argparse
-import multiprocessing
+import threadpool as tp
 
 from common.color import inBlue, inRed
 from common.color import inWhite, inGreen, inYellow
 from common.output import output_init, output_finished, output_add
 
+THREADS_NUM = 10
 
 def check(plugin, passport, passport_type):
     '''
@@ -24,6 +25,7 @@ def check(plugin, passport, passport_type):
     passport: username, email, phone
     passport_type: passport type
     '''
+    requests.packages.urllib3.disable_warnings()
     if plugin["request"]["{}_url".format(passport_type)]:
         url = plugin["request"]["{}_url".format(passport_type)].format(passport)
     else:
@@ -40,7 +42,7 @@ def check(plugin, passport, passport_type):
                 }
     if plugin['request']['method'] == "GET":
         try:
-            content = requests.get(url, headers=headers, timeout=8).content
+            content = requests.get(url, headers=headers, timeout=8, verify=False).content
             content = unicode(content, "utf-8")
         except Exception, e:
             print inRed('\n[-] %s ::: %s\n' % (app_name, str(e)))
@@ -54,20 +56,26 @@ def check(plugin, passport, passport_type):
             pass
     elif plugin['request']['method'] == "POST":
         post_data = plugin['request']['post_fields']
-        if post_data.values().count("") != 1:
-            print "The POST field can only leave a null value."
-            return
+        flag = 0
+        # if post_data.values().count("") == 1:
         for k, v in post_data.iteritems():
             if v == "":
                 post_data[k] = passport
+                flag += 1
+            elif "{}" in v:
+                post_data[k] = v.format(str(passport))
+                flag += 1
+        if flag < 1:
+            print "[-] The POST field can only leave a null value or {}. (%s)" % app_name
+            return
         try:
-            content = requests.post(url, data=post_data, headers=headers, timeout=8).content
+            content = requests.post(url, data=post_data, headers=headers, timeout=8, verify=False).content
             encoding = chardet.detect(content)["encoding"]
-            if encoding == None:
+            if encoding is None:
                 encoding = "utf-8"
             content = unicode(content, encoding)
         except Exception, e:
-            print e, app_name
+            print inRed('\n[-] %s ::: %s\n' % (app_name, str(e)))
             return
         if judge_yes_keyword in content and judge_no_keyword not in content:
             print u"[{}] {}".format(category, ('%s (%s)' % (app_name, website)))
@@ -123,7 +131,7 @@ def main():
         print inRed('\n[+] Email Checking: %s\n') % parser_argument.email
         file_name = "email_" + str(parser_argument.email)
         output_init(file_name, "E-mail: ", str(parser_argument.email))
-    jobs = []
+    _args = []
     for plugin in plugins:
         with open(plugin) as f:
             try:
@@ -132,17 +140,15 @@ def main():
                 print e, plugin
                 continue
         if parser_argument.cellphone:
-            p = multiprocessing.Process(target=check, args=(content,unicode(parser_argument.cellphone, "utf-8"), "cellphone"))
+            _args.append((([content, unicode(parser_argument.cellphone, "utf-8"), "cellphone"]), {}))
         elif parser_argument.user:
-            p = multiprocessing.Process(target=check, args=(content,unicode(parser_argument.user, "utf-8"), "user"))
+            _args.append((([content, unicode(parser_argument.user, "utf-8"), "user"]), {}))
         elif parser_argument.email:
-            p = multiprocessing.Process(target=check, args=(content,unicode(parser_argument.email, "utf-8"), "email"))
-        p.start()
-        jobs.append(p)
-    while(sum([i.is_alive() for i in jobs]) != 0):
-        pass
-    for i in jobs:
-        i.join()
+            _args.append((([content, unicode(parser_argument.email, "utf-8"), "email"]), {}))
+    pool = tp.ThreadPool(THREADS_NUM)
+    reqs = tp.makeRequests(check, _args)
+    [pool.putRequest(req) for req in reqs]
+    pool.wait()
     output_finished(file_name)
 
 
