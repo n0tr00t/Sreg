@@ -24,8 +24,8 @@ def check(plugin, passport, passport_type):
     passport: username, email, phone
     passport_type: passport type
     '''
-    if plugin["request"]["{}_url".format(passport_type)]:
-        url = plugin["request"]["{}_url".format(passport_type)].format(passport)
+    if plugin["request"]["{0}_url".format(passport_type)]:
+        url = plugin["request"]["{0}_url".format(passport_type)]
     else:
         return
     app_name = plugin['information']['name']
@@ -46,7 +46,7 @@ def check(plugin, passport, passport_type):
             print inRed('\n[-] %s ::: %s\n' % (app_name, str(e)))
             return
         if judge_yes_keyword in content and judge_no_keyword not in content:
-            print u"[{}] {}".format(category, ('%s (%s)' % (app_name, website)))
+            print u"[{0}] {1}".format(category, ('%s (%s)' % (app_name, website)))
             icon = plugin['information']['icon']
             desc = plugin['information']['desc']
             output_add(category, app_name, website, passport, passport_type, icon, desc)
@@ -70,7 +70,7 @@ def check(plugin, passport, passport_type):
             print e, app_name
             return
         if judge_yes_keyword in content and judge_no_keyword not in content:
-            print u"[{}] {}".format(category, ('%s (%s)' % (app_name, website)))
+            print u"[{0}] {1}".format(category, ('%s (%s)' % (app_name, website)))
             icon = plugin['information']['icon']
             desc = plugin['information']['desc']
             output_add(category, app_name, website, passport, passport_type, icon, desc)
