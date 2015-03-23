@@ -20,8 +20,8 @@
     },
 
     "status":{
-        "judge_yes_keyword" : "{\"errInfo\":{ \"no\": \"130020\" }",
-        "judge_no_keyword" : "{\"errInfo\":{ \"no\": \"0\" }",
+        "judge_yes_keyword" : "{\"errno\":130020,",
+        "judge_no_keyword" : "{\"errno\":110000,",
         "profile_url" : ""
     }
 }
