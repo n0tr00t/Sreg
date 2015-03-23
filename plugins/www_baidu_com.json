@@ -10,7 +10,7 @@
     },
 
     "request" :{
-        "cellphone_url" : "https://passport.baidu.com/v2/?regphonecheck&token=4ec7c1177a45ff98f7376a6ff3b1a0c1&tpl=mn&apiver=v3&tt=1427084997332&phone={}&exchange=0&isexchangeable=1&callback=bd__cbs__dct5qd",
+        "cellphone_url" : "https://passport.baidu.com/v2/?regphonecheck&phone={}",
         "email_url" : "",
         "user_url" : "",
         "method" : "GET",
