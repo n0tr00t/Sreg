@@ -4,7 +4,7 @@
 - Create:  2015-03-03
 - Author:  Dave, Evi1m0, Hel
 - Fourm: [http://buzz.beebeeto.com](http://buzz.beebeeto.com)
-- Website: [http://ff0000team.github.io/Sreg/](http://ff0000team.github.io/Sreg/)
+- Website: [http://n0tr00t.github.io/Sreg/](http://n0tr00t.github.io/Sreg/)
 
 
 Sreg可对使用者通过输入```email```、```phone```、```username```的返回用户注册的所有互联网护照信息，例如：
