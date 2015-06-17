@@ -110,6 +110,6 @@ def output_add(category, app_name, website, name, passport_type, icon, descripti
                       </td>
                       <td class="hidden-xs owner" bind-once="result.owner">%s</td>
                     </tr>
-    ''' % (website, icon, website, app_name.encode('utf-8'), description.encode('utf-8'), category.encode('utf-8'))
+    ''' % (website, icon, website, app_name, description, category)
     file_object.write(mid_content)
     file_object.close()
