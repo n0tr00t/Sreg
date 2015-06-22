@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
-# author: ff0000team
+# author: n0tr00t
 # website: buzz.beebeeto.com
-
-
 import sys
 import glob
 import json
@@ -13,17 +11,16 @@ import urlparse
 import argparse
 import multiprocessing
 
-from common.color import inBlue, inRed
-from common.color import inWhite, inGreen, inYellow
-from common.output import output_init, output_finished, output_add
+from common.color import *
+from common.output import *
 
 
 def check(plugin, passport, passport_type):
-    '''
+    """
     plugin: *.json
     passport: username, email, phone
     passport_type: passport type
-    '''
+    """
     if plugin["request"]["{0}_url".format(passport_type)]:
         url = plugin["request"]["{0}_url".format(passport_type)]
     else:
@@ -31,31 +28,36 @@ def check(plugin, passport, passport_type):
     app_name = plugin['information']['name']
     category = plugin["information"]["category"]
     website = plugin["information"]["website"]
-    judge_yes_keyword = plugin['status']['judge_yes_keyword']
-    judge_no_keyword = plugin['status']['judge_no_keyword']
+    judge_yes_keyword = plugin['status']['judge_yes_keyword'].encode("utf-8")
+    judge_no_keyword = plugin['status']['judge_no_keyword'].encode("utf-8")
     headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6',
-                'Host': urlparse.urlparse(url).netloc,
-                'Referer': url,
-                }
+        'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6',
+        'Host': urlparse.urlparse(url).netloc,
+        'Referer': url,
+    }
     if plugin['request']['method'] == "GET":
         try:
             content = requests.get(url, headers=headers, timeout=8).content
-            content = unicode(content, "utf-8")
+            encoding = chardet.detect(content)["encoding"]
+            if encoding == None or encoding == "ascii":
+                content = content.encode("utf-8")
+            else:
+                content = content.decode(encoding).encode("utf-8")
         except Exception, e:
-            print inRed('\n[-] %s ::: %s\n' % (app_name, str(e)))
+            print inRed('\n[-] %s Error: %s\n' % (app_name, str(e)))
             return
         if judge_yes_keyword in content and judge_no_keyword not in content:
             print u"[{0}] {1}".format(category, ('%s (%s)' % (app_name, website)))
-            icon = plugin['information']['icon']
-            desc = plugin['information']['desc']
-            output_add(category, app_name, website, passport, passport_type, icon, desc)
+            icon = plugin['information']['icon'].encode("utf-8")
+            desc = plugin['information']['desc'].encode("utf-8")
+            output_add(category.encode("utf-8"), app_name.encode("utf-8"), website,
+                       passport.encode("utf-8"), passport_type, icon, desc)
         else:
             pass
     elif plugin['request']['method'] == "POST":
         post_data = plugin['request']['post_fields']
         if post_data.values().count("") != 1:
-            print "The POST field can only leave a null value."
+            print "[*] The POST field can only leave a null value."
             return
         for k, v in post_data.iteritems():
             if v == "":
@@ -63,26 +65,27 @@ def check(plugin, passport, passport_type):
         try:
             content = requests.post(url, data=post_data, headers=headers, timeout=8).content
             encoding = chardet.detect(content)["encoding"]
-            if encoding == None:
-                encoding = "utf-8"
-            content = unicode(content, encoding)
+            if encoding == None or encoding == "ascii":
+                content = content.encode("utf-8")
+            else:
+                content = content.decode(encoding).encode("utf-8")
         except Exception, e:
-            print e, app_name
+            print inRed('\n[-] %s Error: %s\n' % (app_name, str(e)))
             return
         if judge_yes_keyword in content and judge_no_keyword not in content:
             print u"[{0}] {1}".format(category, ('%s (%s)' % (app_name, website)))
-            icon = plugin['information']['icon']
-            desc = plugin['information']['desc']
-            output_add(category, app_name, website, passport, passport_type, icon, desc)
+            icon = plugin['information']['icon'].encode("utf-8")
+            desc = plugin['information']['desc'].encode("utf-8")
+            output_add(category.encode("utf-8"), app_name.encode("utf-8"), website,
+                       passport.encode("utf-8"), passport_type, icon, desc)
         else:
             pass
     else:
-        print u"{}:::Error!".format(plugin['request']['name'])
+        print inRed(u'\n[*] {0} Error!\n'.format(plugin['request']['name']))
+        # print u"[-]{}:::Error!".format(plugin['request']['name'])
 
 
 def main():
-    reload(sys)
-    sys.setdefaultencoding("utf-8")
     parser = argparse.ArgumentParser(description="Check how many Platforms the User registered.")
     parser.add_argument("-u", action="store", dest="user")
     parser.add_argument("-e", action="store", dest="email")
@@ -132,14 +135,17 @@ def main():
                 print e, plugin
                 continue
         if parser_argument.cellphone:
-            p = multiprocessing.Process(target=check, args=(content,unicode(parser_argument.cellphone, "utf-8"), "cellphone"))
+            p = multiprocessing.Process(target=check,
+                                        args=(content, unicode(parser_argument.cellphone, "utf-8"), "cellphone"))
         elif parser_argument.user:
-            p = multiprocessing.Process(target=check, args=(content,unicode(parser_argument.user, "utf-8"), "user"))
+            p = multiprocessing.Process(target=check,
+                                        args=(content, unicode(parser_argument.user, "utf-8"), "user"))
         elif parser_argument.email:
-            p = multiprocessing.Process(target=check, args=(content,unicode(parser_argument.email, "utf-8"), "email"))
+            p = multiprocessing.Process(target=check,
+                                        args=(content, unicode(parser_argument.email, "utf-8"), "email"))
         p.start()
         jobs.append(p)
-    while(sum([i.is_alive() for i in jobs]) != 0):
+    while sum([i.is_alive() for i in jobs]) != 0:
         pass
     for i in jobs:
         i.join()
