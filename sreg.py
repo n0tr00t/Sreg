@@ -27,7 +27,7 @@ def check(plugin, passport, passport_type):
         return
     app_name = plugin['information']['name']
     category = plugin["information"]["category"]
-    website = plugin["information"]["website"]
+    website = plugin["information"]["website"].encode("utf-8")
     judge_yes_keyword = plugin['status']['judge_yes_keyword'].encode("utf-8")
     judge_no_keyword = plugin['status']['judge_no_keyword'].encode("utf-8")
     headers = {
@@ -115,15 +115,15 @@ def main():
         print '\nInput "-h" view the help information.'
         sys.exit(0)
     if parser_argument.cellphone:
-        print inRed('\n[+] Phone Checking: %s\n') % parser_argument.cellphone
+        print inYellow('\n[+] Phone Checking: %s\n') % parser_argument.cellphone
         file_name = "cellphone_" + str(parser_argument.cellphone)
         output_init(file_name, "Phone: ", str(parser_argument.cellphone))
     if parser_argument.user:
-        print inRed('\n[+] Username Checking: %s\n') % parser_argument.user
+        print inYellow('\n[+] Username Checking: %s\n') % parser_argument.user
         file_name = "user_" + str(parser_argument.user)
         output_init(file_name, "UserName: ", str(parser_argument.user))
     if parser_argument.email:
-        print inRed('\n[+] Email Checking: %s\n') % parser_argument.email
+        print inYellow('\n[+] Email Checking: %s\n') % parser_argument.email
         file_name = "email_" + str(parser_argument.email)
         output_init(file_name, "E-mail: ", str(parser_argument.email))
     jobs = []
