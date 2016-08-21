@@ -37,6 +37,7 @@ def check(plugin, passport, passport_type):
     }
     if plugin['request']['method'] == "GET":
         try:
+            url = url.replace('{}', passport)
             content = requests.get(url, headers=headers, timeout=8).content
             encoding = chardet.detect(content)["encoding"]
             if encoding == None or encoding == "ascii":
