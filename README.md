@@ -3,7 +3,6 @@
 - AppName: Sreg [Search Registration]
 - Create:  2015-03-03
 - Author:  Dave, Evi1m0, Hel
-- Fourm: [http://buzz.beebeeto.com](http://buzz.beebeeto.com)
 - Website: [http://n0tr00t.github.io/Sreg/](http://n0tr00t.github.io/Sreg/)
 
 
