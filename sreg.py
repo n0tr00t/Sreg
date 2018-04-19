@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
-# author: n0tr00t
-# website: buzz.beebeeto.com
+# author: www.n0tr00t.com
 
-from collections import OrderedDict
 import sys
 import glob
 import json
@@ -15,6 +13,7 @@ import multiprocessing
 
 from common.color import *
 from common.output import *
+from collections import OrderedDict
 
 
 def check(plugin, passport, passport_type):
@@ -124,7 +123,7 @@ def main():
     print inGreen(banner)
     print '[*] App: Search Registration'
     print '[*] Version: V1.1(20180419)'
-    print '[*] Website: buzz.beebeeto.com'
+    print '[*] Website: www.n0tr00t.com'
     file_name = ""
     if all_argument.count(None) != 2:
         print '\nInput "-h" view the help information.'
