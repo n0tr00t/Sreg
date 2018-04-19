@@ -8,8 +8,8 @@
 
 Sreg可对使用者通过输入```email```、```phone```、```username```的返回用户注册的所有互联网护照信息，例如：
 
-    ➜  Sreg git:(master) python reg_test.py -h
-    usage: reg_test.py [-h] [-u USER] [-e EMAIL] [-c CELLPHONE]
+    ➜  Sreg git:(master) python sreg.py -h
+    usage: sreg.py [-h] [-u USER] [-e EMAIL] [-c CELLPHONE]
 
     Check how many Platforms the User registered.
 
@@ -19,7 +19,7 @@ Sreg可对使用者通过输入```email```、```phone```、```username```的返�
       -e EMAIL
       -c CELLPHONE
 
-    ➜  Sreg git:(master) ✗ python reg_test.py -e test@test.com
+    ➜  Sreg git:(master) ✗ python sreg.py -e test@test.com
 
          .d8888b.
         d88P  Y88b
