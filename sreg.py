@@ -2,6 +2,8 @@
 # encoding: utf-8
 # author: n0tr00t
 # website: buzz.beebeeto.com
+
+from collections import OrderedDict
 import sys
 import glob
 import json
@@ -30,15 +32,25 @@ def check(plugin, passport, passport_type):
     website = plugin["information"]["website"].encode("utf-8")
     judge_yes_keyword = plugin['status']['judge_yes_keyword'].encode("utf-8")
     judge_no_keyword = plugin['status']['judge_no_keyword'].encode("utf-8")
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6',
+    headers = OrderedDict({
         'Host': urlparse.urlparse(url).netloc,
+        'Connection': 'closed',
+        'Pragma': 'no-cache',
+        'Cache-Control': 'no-cache',
+        'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6',
+        'Accept-Encoding': 'gzip, deflate',
+        'Accept': '*/*',
         'Referer': url,
-    }
+    })
+    if plugin.has_key("headers"):
+        for header_key in plugin['headers'].keys():
+            headers[header_key] = plugin['headers'][header_key]
     if plugin['request']['method'] == "GET":
         try:
             url = url.replace('{}', passport)
-            content = requests.get(url, headers=headers, timeout=8).content
+            s = requests.Session()
+            s.headers = headers
+            content = s.get(url, headers={}, timeout=8).content
             encoding = chardet.detect(content)["encoding"]
             if encoding == None or encoding == "ascii":
                 content = content.encode("utf-8")
@@ -64,7 +76,9 @@ def check(plugin, passport, passport_type):
             if v == "":
                 post_data[k] = passport
         try:
-            content = requests.post(url, data=post_data, headers=headers, timeout=8).content
+            s = requests.Session()
+            s.headers = headers
+            content = s.post(url, data=post_data, headers={}, timeout=8).content
             encoding = chardet.detect(content)["encoding"]
             if encoding == None or encoding == "ascii":
                 content = content.encode("utf-8")
@@ -109,7 +123,7 @@ def main():
     plugins = glob.glob("./plugins/*.json")
     print inGreen(banner)
     print '[*] App: Search Registration'
-    print '[*] Version: V1.0(20150303)'
+    print '[*] Version: V1.1(20180419)'
     print '[*] Website: buzz.beebeeto.com'
     file_name = ""
     if all_argument.count(None) != 2:
