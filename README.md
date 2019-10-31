@@ -1,3 +1,7 @@
+### 暂停维护
+
+----
+
 ### Sreg V1.0
 
 - AppName: Sreg [Search Registration]
